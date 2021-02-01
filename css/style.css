@@ -1,0 +1,40 @@
+body {
+    font-family: 'Poppins', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+span {
+    display: block;
+    margin: 10px auto;
+    color: red;
+}
+
+img{
+    width: 100%;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+/* @media (min-width: 1024px) {
+
+} */
+
