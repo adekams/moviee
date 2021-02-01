@@ -21,16 +21,44 @@ img{
     width: 100%;
 }
 
-.movie-list {
+header {
+    background: rgb(13, 37, 63);
+    padding: 15px ;
+}
+
+main {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(13, 37, 63);
+    margin: 15px;
+}
+
+.flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+}
+nav.flex {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .movie {
     width: 200px;
     margin: 20px;
     text-align: center;
+}
+
+input {
+    border: 1px solid transparent;
+    padding: 8px 30px;
+}
+input:focus {
+    outline: none;
 }
 
 
