@@ -21,7 +21,7 @@ img{
     width: 100%;
 }
 
-header {
+header, footer {
     background: rgb(13, 37, 63);
     padding: 15px ;
 }
@@ -56,10 +56,27 @@ nav.flex {
 input {
     border: 1px solid transparent;
     padding: 8px 30px;
+    border-radius: 50px;
 }
 input:focus {
     outline: none;
 }
+
+footer {
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(1, 180, 228);
+    cursor: pointer;
+}
+
 
 
 /* @media (min-width: 1024px) {
