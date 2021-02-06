@@ -53,13 +53,15 @@ search.addEventListener('keyup', (e) => {
     e.preventDefault()
 
     let searchTerm = search.value
-    if (searchTerm) { 
+    if (searchTerm && searchTerm !== '') { 
           list.innerHTML = ''    
         console.log(search.value) 
         connection.style.display = "block"      
         movieApp(searchPath + searchTerm)
         // search.value = ''
         console.log(list.length)       
+    }else {
+        window.location.reload()
     }
 })
 
