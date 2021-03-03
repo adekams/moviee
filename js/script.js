@@ -2,12 +2,10 @@ const connection = document.querySelector('.connection')
 const list = document.querySelector('.movie-list')
 const search = document.querySelector('input')
 
-const theKey = config.THE_KEY
-
 const imgPath = "https://image.tmdb.org/t/p/w1280"
-const searchPath = "https://api.themoviedb.org/3/search/movie?api_key=" + theKey + '&query='
+const searchPath = "https://api.themoviedb.org/3/search/movie?api_key=ef4a985bb7a3ecdb2dd036b385d74175&query="
 
-const TMdburl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + theKey
+const TMdburl = 'https://api.themoviedb.org/3/discover/movie?api_key=ef4a985bb7a3ecdb2dd036b385d74175'
 
 
 const movieApp = async(url) => {
