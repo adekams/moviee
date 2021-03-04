@@ -1,7 +1,8 @@
-const connection = document.querySelector('.connection')
+const spinner = document.querySelector('.spinner')
 const list = document.querySelector('.movie-list')
 const search = document.querySelector('input')
 
+//get api key
 const theKey = config.THE_KEY
 
 const imgPath = "https://image.tmdb.org/t/p/w1280"
@@ -34,7 +35,7 @@ const movieApp = async(url) => {
             release.innerHTML = `Release Date:${movie.release_date}`
             text.innerHTML = `${movie.overview}`
 
-            connection.style.display = 'none'
+            spinner.style.display = 'none'
 
             el.appendChild(imgWrapper)
             imgWrapper.appendChild(image)
@@ -48,7 +49,7 @@ const movieApp = async(url) => {
         });
     } catch (error) {
         console.log(error)
-        connection.innerHTML = "Please connect to the internet or check your connection."
+        spinner.innerHTML = "Please connect to the internet or check your spinner."
     }
     
 }
@@ -61,7 +62,7 @@ search.addEventListener('keyup', (e) => {
     if (searchTerm && searchTerm !== '') { 
           list.innerHTML = ''    
         console.log(search.value) 
-        connection.style.display = "block"      
+        spinner.style.display = "block"      
         movieApp(searchPath + searchTerm)
         // search.value = ''
         console.log(list.length)       
