@@ -7,7 +7,7 @@ const theKey = config.THE_KEY
 const imgPath = "https://image.tmdb.org/t/p/w1280"
 const searchPath = "https://api.themoviedb.org/3/search/movie?api_key=" + theKey + "&query="
 
-const TMdburl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + theKey
+const tmdbUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + theKey
 
 
 const movieApp = async(url) => {
@@ -21,6 +21,7 @@ const movieApp = async(url) => {
             // create tags to hold the movie information
             const el = document.createElement('DIV')
             const image = document.createElement('IMG')
+            const imgWrapper = document.createElement('FIGURE')
             const title = document.createElement('H2')
             const text = document.createElement('P')
             const info = document.createElement('DIV')
@@ -35,7 +36,9 @@ const movieApp = async(url) => {
 
             connection.style.display = 'none'
 
-            el.appendChild(image)
+            el.appendChild(imgWrapper)
+            imgWrapper.appendChild(image)
+            
             el.appendChild(title)
             el.appendChild(release)
             info.appendChild(text)
@@ -67,4 +70,4 @@ search.addEventListener('keyup', (e) => {
     }
 })
 
-movieApp(TMdburl)
+movieApp(tmdbUrl)
