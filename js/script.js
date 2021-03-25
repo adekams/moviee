@@ -16,6 +16,7 @@ const movieApp = async(url) => {
     try {
         let res = await axios.get(url)
         let data = await res.data.results
+        console.log(data)
 
         // for each movie..
         data.forEach(movie => {
@@ -26,13 +27,14 @@ const movieApp = async(url) => {
             const title = document.createElement('H2')
             const text = document.createElement('P')
             const info = document.createElement('DIV')
-            const release = document.createElement('SPAN')
+            const ratings = document.createElement('SPAN')
 
             el.setAttribute('class', 'movie')
             info.setAttribute('class', 'info')
+            ratings.setAttribute('class', 'ratings')
             image.src = `${imgPath}${movie.poster_path}` 
             title.innerHTML = `${movie.title}` 
-            release.innerHTML = `Release Date:${movie.release_date}`
+            ratings.innerHTML = `${movie.vote_average}`
             text.innerHTML = `${movie.overview}`
 
             spinner.style.display = 'none'
@@ -41,7 +43,7 @@ const movieApp = async(url) => {
             imgWrapper.appendChild(image)
             
             el.appendChild(title)
-            el.appendChild(release)
+            el.appendChild(ratings)
             info.appendChild(text)
             el.appendChild(info)
             list.appendChild(el)
