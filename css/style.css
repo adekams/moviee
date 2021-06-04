@@ -18,11 +18,16 @@ nav.flex {
 }
 
 main {
-    background: linear-gradient(to top right, #18242D, #24343F, #364D59);
+    background: transparent;
     padding: 40px 0;
     text-align: center;
 }
 
+.spinner img {
+    width: 40vw;
+    height: 40vh;
+    
+}
 
 input {
     border: 1px solid transparent;
